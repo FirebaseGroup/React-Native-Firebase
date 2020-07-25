@@ -40,8 +40,8 @@ const HomeScreen = ({ navigation }) => {
     <Button
       title="Go to Abhinav's profile"
       onPress={() =>
-        storeName("Abhinav");
-        navigation.navigate('Profile', { name: 'Jane' })
+        storeName("Abhinav")
+        //navigation.navigate('Profile', { name: 'Jane' })
       }
     />
   );
