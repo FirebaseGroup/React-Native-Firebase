@@ -4,8 +4,21 @@ import { StyleSheet, Text, Button } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import * as firebase from 'Firebase';
 
 const Stack = createStackNavigator();
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDQyEHHX8nRg3GZMwaMAHOdnc3i9KJ8ClY",
+  authDomain: "react-native-firebase-abhi12.firebaseapp.com",
+  databaseURL: "https://react-native-firebase-abhi12.firebaseio.com",
+  projectId: "react-native-firebase-abhi12",
+  storageBucket: "react-native-firebase-abhi12.appspot.com",
+  messagingSenderId: "990244535757",
+  appId: "1:990244535757:web:a97c5eece8a6a8b8115884"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 export default function App() {
   return (
@@ -25,7 +38,7 @@ export default function App() {
 const HomeScreen = ({ navigation }) => {
   return (
     <Button
-      title="Go to Jane's profile"
+      title="Go to Abhinav's profile"
       onPress={() =>
         navigation.navigate('Profile', { name: 'Jane' })
       }
@@ -34,7 +47,7 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const ProfileScreen = () => {
-  return <Text>This is Jane's profile</Text>;
+  return <Text>This is Abhinav's profile</Text>;
 };
 
 const styles = StyleSheet.create({
