@@ -40,6 +40,7 @@ const HomeScreen = ({ navigation }) => {
     <Button
       title="Go to Abhinav's profile"
       onPress={() =>
+        storeName("Abhinav");
         navigation.navigate('Profile', { name: 'Jane' })
       }
     />
@@ -49,6 +50,10 @@ const HomeScreen = ({ navigation }) => {
 const ProfileScreen = () => {
   return <Text>This is Abhinav's profile</Text>;
 };
+
+function storeName(name) {
+  firebase.database().ref('name').push(name);
+}
 
 const styles = StyleSheet.create({
   container: {
