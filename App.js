@@ -4,7 +4,7 @@ import { StyleSheet, Text, Button } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import * as firebase from 'Firebase';
+import * as firebase from 'firebase';
 
 const Stack = createStackNavigator();
 
