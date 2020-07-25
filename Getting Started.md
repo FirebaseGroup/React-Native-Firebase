@@ -66,4 +66,25 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       ```
-  
+
+## Enable Navigation Screens
+
+- Install React Navigation
+  ```
+  npm install @react-navigation/native @react-navigation/stack
+  ```
+- Install dependencies with `expo`
+  ```
+  expo install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+  ```
+- Import React Native Gesture Handler
+  Add the following import statement to App.js
+  ```
+  import 'react-native-gesture-handler'
+  ```
+- Import `NavigationContainer` and `createStackNavigator`
+  Add the following import statements to App.js
+  ```
+  import { NavigationContainer } from '@react-navigation/native'
+  import { createStackNavigator } from '@react-navigation/stack'
+  ```
