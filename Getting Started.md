@@ -88,3 +88,11 @@
   import { NavigationContainer } from '@react-navigation/native'
   import { createStackNavigator } from '@react-navigation/stack'
   ```
+- Initialize Firebase Database
+  ```
+  firebase init database
+  ```
+- Deploy Firebase Rules
+  ```
+  firebase deploy --only database
+  ```
